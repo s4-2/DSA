@@ -1,0 +1,108 @@
+'''
+
+                            Online Python Compiler.
+                Code, Compile, Run and Debug python program online.
+Write your code in this editor and press "Run" button to execute it.
+
+'''
+S=[]
+top=None
+def isEmpty(stk):
+    if stk==[]:
+        return True
+    else:
+        return False
+        
+def push(stk,item):
+    stk.append(item)
+    top=len(stk)-1
+    
+def s_pop(stk):
+    if isEmpty(stk):
+        return('Underflow')
+    else:
+        i=stk.pop()
+        if len(stk)==0:
+            top=None
+        else:
+            top=top-1
+    return i
+
+def peek(stk):
+    if isEmpty(stk):
+        return("Underflow")
+    else:
+        top=len(stk)-1
+        return stk[top]
+
+def display(stk):
+    if isEmpty(stk):
+        return("Stack is Empty")
+    else:
+        top=len(stk)-1
+        print(stk[top],'<-- Top')
+        for i in range(top-1,-1,-1):
+            print(stk[i])
+
+while True:
+    print('Stack Implementation')            
+    print('1.Push') 
+    print('2.Pop') 
+    print('3.Peak') 
+    print('4.Display') 
+    print('5.Exit') 
+    ch=int(input("Enter the choice(1-5)"))
+    print('\n')
+
+    if ch==1:
+        item=int(input("Enter item"))
+        push(S,item)
+        print('%d added successfully'%item)
+        input('Press any Key')
+    elif ch==2:
+        item=s_pop(S)
+        if item=='Underflow':
+            print("Stack is Empty")
+        else:
+            print('%d is popped'%item)
+        input('Press any key to continue...')
+    elif ch==3:
+        item=peek(S)
+        if item=='Underflow':
+            print("Stack is Empty")
+        else:
+            print('%d is popped'%item)
+        input('Press any key to continue...')
+    elif ch==4:
+        display(S)
+        input('Press any key to continue...')
+    elif ch==5:
+        break
+    else:
+        print('Choose from 1-5')
+        
+    print('\n')
+        
+            
+            
+            
+            
+            
+            
+    
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+        
+    
+    
