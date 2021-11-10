@@ -1,0 +1,14 @@
+g={1:[2,3],
+   2:[1,3],
+   3:[2,4],
+   4:[1,4]
+}
+print ("Original Graph ",g, len(g))
+c={}
+for j in g:
+    c[j]=[]
+#print (c)
+for i in g:
+    for x in g[i]:
+        c[i].append(x)
+print ("Clone Graph ",c)
